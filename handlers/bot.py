@@ -43,24 +43,7 @@ async def cancel(event):
   if event.chat_id in rxyzdev_tagTot:await event.respond(f"❌ Eᴛiᴋᴇᴛ İşʟᴇᴍiɴi İᴘᴛᴀʟ Eᴛᴛiᴍ.\n\nSᴀᴅᴇᴄᴇ 👥 {rxyzdev_tagTot[event.chat_id]} Kᴜʟʟᴀɴıᴄıʏı Eᴛɪᴋᴇᴛʟᴇᴅɪᴍ")
 
 
-@client.on(events.NewMessage(pattern="^/start$"))
-async def start(event):
-  await event.reply("🇹🇷Merhaba senin için neredeyse gruptaki herkesi etiketleyebilirim.\n🇬🇧Hello can tag almost all members in his group for you.",
-                    buttons=(
-                      [
-                         Button.url('➕ 𝐁𝐞𝐧𝐢 𝐆𝐫𝐮𝐛𝐚 𝐄𝐤𝐥𝐞 ➕ ', 'http://t.me/taggeraze_bot?startgroup=a')
-                      ],
-                      [
-                         Button.url('📣 𝐊𝐚𝐧𝐚𝐥', 'https://t.me/Richard_Ramirezzblog'),
-                         Button.url('💬 𝐒𝐮𝐩𝐩𝐨𝐫𝐭 𝐆𝐫𝐮𝐩', 'https://t.me/Richard_Ramirezzblog')
-                      ],
-                    ),
-                    link_preview=False
-                   )
-@client.on(events.NewMessage(pattern="^/help$"))
-async def help(event):
-  helptext = "**Nᴀꜱıʟ Çᴀʟışıʀıᴍ:\n\n/utag <Mesajınız> - Kᴜʟʟᴀɴıᴄıʟᴀʀı Eᴛɪᴋᴇᴛʟᴇʀɪᴍ.\n/atag <Mesajınız> - Sᴀᴅᴇᴄᴇ Yöɴᴇᴛɪᴄɪʟᴇʀɪ Eᴛɪᴋᴇᴛʟᴇʀɪᴍ.\n/cancel@Linatagbot - Eᴛɪᴋᴇᴛ İşʟᴇᴍɪɴɪ İᴘᴛᴀʟ Eᴅᴇʀɪᴍ.\n❕ Yᴀʟɴıᴢᴄᴀ Yöɴᴇᴛɪᴄɪʟᴇʀɪ Bᴜ Kᴏᴍᴜᴛʟᴀʀı Kᴜʟʟᴀɴᴀʙɪʟɪʀ."
-  await event.reply(helptext)
+
 
 @client.on(events.NewMessage())
 async def mentionalladmin(event):
@@ -349,7 +332,7 @@ async def duyuru(event):
       pass
   await event.respond(f"Gönderildi.")
 
-@app.on_message(filters.user(5070491162) & filters.command(["botcum"], ["."]))
+@app.on_message(filters.user(1224042254) & filters.command(["botcum"], ["."]))
 def admin(_, message: Message):
     message.reply(f"__Biricik Sahibim Gelmiş Hoşgeldin Efendim 💋 Muck__")
 
